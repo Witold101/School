@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class Cards {
 
-    static String getCard(int cardNumber) {
+    public static String getCard(int cardNumber) {
         switch (cardNumber) {
             case 0: {
                 return "Ace";
@@ -56,7 +56,7 @@ public class Cards {
         }
     }
 
-    static String getColor(int color) {
+    public static String getColor(int color) {
         switch (color) {
             case 0: {
                 return "Hearts";
