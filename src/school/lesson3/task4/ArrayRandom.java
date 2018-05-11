@@ -13,18 +13,18 @@ public class ArrayRandom {
         Random random = new Random();
         int[] array = new int[4];
         for (int i = 0; i < 4; i++) {
-            array[i] = random.nextInt(90)+10;
+            array[i] = random.nextInt(90) + 10;
         }
         return array;
     }
 
     static boolean sequence(int[] array) {
         boolean flag = false;
-        for (int i = 0; i < array.length-1; i++) {
+        for (int i = 0; i < array.length - 1; i++) {
             if (array[i] < array[i + 1]) {
                 flag = true;
-            }else {
-                flag=false;
+            } else {
+                flag = false;
                 break;
             }
         }

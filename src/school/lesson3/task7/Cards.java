@@ -77,6 +77,6 @@ public class Cards {
 
     public static void main(String[] args) {
         Random random = new Random();
-        System.out.println(getCard(random.nextInt(13))+"of" + getColor(random.nextInt(4)));
+        System.out.println(getCard(random.nextInt(13)) + "of" + getColor(random.nextInt(4)));
     }
 }

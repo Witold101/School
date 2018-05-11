@@ -1,5 +1,9 @@
 package school.lesson3.task1;
 
+/**
+ * Напишите программу, которая печатает массив сначала в обычном порядке, затем в обратном.
+ */
+
 public class ArrayPrint {
 
     static void arrayPrint(int[] array) {

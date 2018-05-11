@@ -60,25 +60,24 @@ public class SumArray {
     static int sumArrayValue(int minimumIndex, int maximumIndex, int[] array) {
         int result = 0;
 
-        if (minimumIndex>maximumIndex){
+        if (minimumIndex > maximumIndex) {
             int temp = minimumIndex;
-            minimumIndex=maximumIndex;
-            maximumIndex=temp;
+            minimumIndex = maximumIndex;
+            maximumIndex = temp;
         }
-        if (minimumIndex < maximumIndex-1) {
-            for (int i =minimumIndex+1;i<=maximumIndex-1;i++){
-                result=result+array[i];
+        if (minimumIndex < maximumIndex - 1) {
+            for (int i = minimumIndex + 1; i <= maximumIndex - 1; i++) {
+                result = result + array[i];
             }
         }
         return result;
     }
 
     public static void main(String[] args) {
+        int[] array = {1, 18, 9, 1};
+        int minimumIndex = searchIndexMinimumMaximumValueArray(array)[0];
+        int maximumIndex = searchIndexMinimumMaximumValueArray(array)[1];
 
-        int[] array = {1,18,9,1};
-        int minimumIndex=searchIndexMinimumMaximumValueArray(array)[0];
-        int maximumIndex=searchIndexMinimumMaximumValueArray(array)[1];
-
-        System.out.print("The sum of numbers equal- " + sumArrayValue(minimumIndex,maximumIndex,array));
+        System.out.print("The sum of numbers equal- " + sumArrayValue(minimumIndex, maximumIndex, array));
     }
 }
