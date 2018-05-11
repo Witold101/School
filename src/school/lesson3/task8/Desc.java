@@ -16,9 +16,19 @@ public class Desc {
         return random.nextInt(maximum);
     }
 
-    static boolean isEquals(int number, int[][] array) {
-        int i = randomInt(4);
-        int j = randomInt(13);
+    /**
+     * The procedure writes down an integer in a casual cell of the
+     * two-dimensional massif if the value of a cell is equal to 0
+     *
+     * @param number integer for write
+     * @param array array for write
+     * @param index1 first index array
+     * @param index2 second index array
+     * @return tru or false
+     */
+    static boolean isEqualsArray(int number, int[][] array, int index1, int index2) {
+        int i = randomInt(index1);
+        int j = randomInt(index2);
         if (array[i][j] == 0) {
             array[i][j] = number;
             return true;
@@ -28,13 +38,15 @@ public class Desc {
     }
 
     public static void main(String[] args) {
-        int[][] deck = new int[4][13];
+        int index1 = 4;
+        int index2 = 13;
+        int[][] deck = new int[index1][index2];
         for (int i = 0; i < 52; i++) {
-            while (!isEquals(i + 1, deck)) ;
+            while (!isEqualsArray(i + 1, deck,index1,index2)) ;
         }
         for (int a = 1; a < 53; a++) {
-            for (int i = 0; i < 4; i++) {
-                for (int j = 0; j < 13; j++) {
+            for (int i = 0; i < index1; i++) {
+                for (int j = 0; j < index2; j++) {
                     if (deck[i][j] == a) {
                         System.out.println(a + ":" + Cards.getColor(i) + "of" + Cards.getCard(j));
                     }
