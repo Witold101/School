@@ -40,9 +40,8 @@ public class AtmNew {
     }
 
     /**
-     *
-     * @param sum - all sum
-     * @param nominal - nominal banknotes
+     * @param sum               - all sum
+     * @param nominal           - nominal banknotes
      * @param quantityBanknotes - quantity banknotes in ATM this nominal
      * @return [0] sum, [1]- quantity banknotes
      */
@@ -61,19 +60,24 @@ public class AtmNew {
 
         sumAndQuantityBanknotes = getBanknotes(sum, NOMINAL_100, nominal100);
         setNominal100(getNominal100() - sumAndQuantityBanknotes[1]);
+        if (sumAndQuantityBanknotes[0] < NOMINAL_50 && sumAndQuantityBanknotes[0] % NOMINAL_20 > 0 &&
+                sumAndQuantityBanknotes[1] > 0) {
+            setNominal100(getNominal100()+1);
+            sumAndQuantityBanknotes[0]=sumAndQuantityBanknotes[0]+NOMINAL_100;
+        }
         sumAndQuantityBanknotes = getBanknotes(sumAndQuantityBanknotes[0], NOMINAL_50, nominal50);
         setNominal50(getNominal50() - sumAndQuantityBanknotes[1]);
 
         if (sumAndQuantityBanknotes[0] % NOMINAL_20 == 0) {
             sumAndQuantityBanknotes = getBanknotes(sumAndQuantityBanknotes[0], NOMINAL_20, nominal20);
             setNominal20(getNominal20() - sumAndQuantityBanknotes[1]);
-        } else if (sumAndQuantityBanknotes[1]>0){
+        } else if (sumAndQuantityBanknotes[1] > 0) {
             sumAndQuantityBanknotes[0] = sumAndQuantityBanknotes[0] + NOMINAL_50;
             setNominal50(getNominal50() + 1);
             sumAndQuantityBanknotes = getBanknotes(sumAndQuantityBanknotes[0], NOMINAL_20, nominal20);
             setNominal20(getNominal20() - sumAndQuantityBanknotes[1]);
-        }else {
-            return  false;
+        } else {
+            return false;
         }
         return sumAndQuantityBanknotes[0] == 0;
     }
