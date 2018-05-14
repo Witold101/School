@@ -73,16 +73,6 @@ public class Atm {
         return tempBanknotes;
     }
 
-
-//    private boolean getMany(int quantityBanknotes,int nominal, int sum){
-//        while (quantityBanknotes > 0 && sum >= nominal) {
-//            sum = sum - NOMINAL_50;
-//            this.nominal50--;
-//            tempBanknotes[1]++;
-//        }
-//    }
-
-
     private boolean getBanknotesStep2(int sum) {
         int[] tempBanknotes = new int[]{0, 0};
 
