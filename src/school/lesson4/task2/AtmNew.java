@@ -40,9 +40,10 @@ public class AtmNew {
     }
 
     /**
-     * @param sum
-     * @param nominal
-     * @param quantityBanknotes
+     *
+     * @param sum - all sum
+     * @param nominal - nominal banknotes
+     * @param quantityBanknotes - quantity banknotes in ATM this nominal
      * @return [0] sum, [1]- quantity banknotes
      */
     private int[] getBanknotes(int sum, int nominal, int quantityBanknotes) {
@@ -50,27 +51,31 @@ public class AtmNew {
         while (result[0] >= nominal && quantityBanknotes > 0) {
             result[0] = result[0] - nominal;
             result[1]++;
+            quantityBanknotes--;
         }
         return result;
     }
 
-    public boolean getSum(int sum){
+    public boolean getSum(int sum) {
         int[] sumAndQuantityBanknotes;
-        sumAndQuantityBanknotes=getBanknotes(sum,NOMINAL_100,nominal100);
-        setNominal100(getNominal100()-sumAndQuantityBanknotes[1]);
-        sumAndQuantityBanknotes=getBanknotes(sumAndQuantityBanknotes[0],NOMINAL_50,nominal50);
-        setNominal50(getNominal50()-sumAndQuantityBanknotes[1]);
-        
-        if (sumAndQuantityBanknotes[0]%NOMINAL_20==0 && sumAndQuantityBanknotes[0]>0){
-            sumAndQuantityBanknotes=getBanknotes(sum,NOMINAL_20,nominal20);
-            setNominal20(getNominal20()-sumAndQuantityBanknotes[1]);
-        }else{
-            sum=sum+NOMINAL_50;
-            setNominal50(getNominal50()+1);
-            sumAndQuantityBanknotes=getBanknotes(sum,NOMINAL_20,nominal20);
-            setNominal20(getNominal20()-sumAndQuantityBanknotes[1]);
+
+        sumAndQuantityBanknotes = getBanknotes(sum, NOMINAL_100, nominal100);
+        setNominal100(getNominal100() - sumAndQuantityBanknotes[1]);
+        sumAndQuantityBanknotes = getBanknotes(sumAndQuantityBanknotes[0], NOMINAL_50, nominal50);
+        setNominal50(getNominal50() - sumAndQuantityBanknotes[1]);
+
+        if (sumAndQuantityBanknotes[0] % NOMINAL_20 == 0) {
+            sumAndQuantityBanknotes = getBanknotes(sumAndQuantityBanknotes[0], NOMINAL_20, nominal20);
+            setNominal20(getNominal20() - sumAndQuantityBanknotes[1]);
+        } else if (sumAndQuantityBanknotes[1]>0){
+            sumAndQuantityBanknotes[0] = sumAndQuantityBanknotes[0] + NOMINAL_50;
+            setNominal50(getNominal50() + 1);
+            sumAndQuantityBanknotes = getBanknotes(sumAndQuantityBanknotes[0], NOMINAL_20, nominal20);
+            setNominal20(getNominal20() - sumAndQuantityBanknotes[1]);
+        }else {
+            return  false;
         }
-        return sumAndQuantityBanknotes[0]==0;
+        return sumAndQuantityBanknotes[0] == 0;
     }
 
     public void printCash() {
