@@ -11,13 +11,23 @@ public class Accounting {
     private BigDecimal bigDecimal;
 
     public Accounting(Long aLong, Integer aInteger) {
-        this.aLong = aLong;
-        this.aInteger = aInteger;
+        if (aLong != null && aInteger != null) {
+            this.aLong = aLong;
+            this.aInteger = aInteger;
+        } else {
+            this.aLong = 0L;
+            this.aInteger = 0;
+        }
     }
 
     public Accounting(Float aFloat, Double aDouble) {
-        this.aFloat = aFloat;
-        this.aDouble = aDouble;
+        if (aFloat != null && aDouble != null) {
+            this.aFloat = aFloat;
+            this.aDouble = aDouble;
+        } else {
+            this.aFloat = 0f;
+            this.aDouble = 0.0;
+        }
     }
 
     public BigDecimal getBigDecimal() {
@@ -25,7 +35,11 @@ public class Accounting {
     }
 
     public void setBigDecimal(BigDecimal bigDecimal) {
-        this.bigDecimal = bigDecimal;
+        if (bigDecimal != null) {
+            this.bigDecimal = bigDecimal;
+        }else {
+            this.bigDecimal=new BigDecimal(0);
+        }
     }
 
     public Long getaLong() {
@@ -33,7 +47,11 @@ public class Accounting {
     }
 
     public void setaLong(Long aLong) {
-        this.aLong = aLong;
+        if (aLong != null) {
+            this.aLong = aLong;
+        }else {
+            this.aLong=0L;
+        }
     }
 
     public Integer getaInteger() {
@@ -41,7 +59,11 @@ public class Accounting {
     }
 
     public void setaInteger(Integer aInteger) {
-        this.aInteger = aInteger;
+        if (aInteger != null) {
+            this.aInteger = aInteger;
+        }else {
+            this.aInteger=0;
+        }
     }
 
     public Float getaFloat() {
@@ -49,7 +71,11 @@ public class Accounting {
     }
 
     public void setaFloat(Float aFloat) {
-        this.aFloat = aFloat;
+        if (aFloat != null) {
+            this.aFloat = aFloat;
+        }else {
+            this.aFloat = 0f;
+        }
     }
 
     public Double getaDouble() {
@@ -57,7 +83,11 @@ public class Accounting {
     }
 
     public void setaDouble(Double aDouble) {
-        this.aDouble = aDouble;
+        if (aDouble != null) {
+            this.aDouble = aDouble;
+        }else {
+            this.aDouble = 0.0;
+        }
     }
 
     public Long longAddInteger() {
@@ -68,7 +98,7 @@ public class Accounting {
         return this.aDouble + this.aFloat;
     }
 
-    public BigDecimal doubleAddDecimal(){
-        return this.bigDecimal=new BigDecimal(aDouble.toString()).add(new BigDecimal(aFloat.toString()));
+    public BigDecimal doubleAddDecimal() {
+        return this.bigDecimal = new BigDecimal(aDouble.toString()).add(new BigDecimal(aFloat.toString()));
     }
 }
