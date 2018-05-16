@@ -10,11 +10,11 @@ import school.lesson3.task1_1.ArrayCycle;
 public class LineArize {
 
     static int[] linearize(int[][]array){
-        int lengtArray=0;
+        int lengthArray=0;
         for (int i = 0; i < array.length; i++) {
-            lengtArray=array[i].length+lengtArray;
+            lengthArray=array[i].length+lengthArray;
         }
-        int[]result=new int[lengtArray];
+        int[]result=new int[lengthArray];
 
         int token=0;
         for (int i = 0; i < array.length ; i++) {
