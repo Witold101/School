@@ -6,6 +6,7 @@ public class Test {
         int quantity100 = 4;
         int quantity50 = 10;
         int quantity20 = 35;
+        String[] tt = new String[10];
 
         AtmNew atmNew = new AtmNew(quantity20, quantity50, quantity100);
         atmNew.printCash();
@@ -18,7 +19,5 @@ public class Test {
         } else {
             System.out.println("Ошибка данных!!!");
         }
-
-
     }
 }
