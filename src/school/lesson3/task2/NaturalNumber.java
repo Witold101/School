@@ -14,7 +14,7 @@ public class NaturalNumber {
         int number = 0;
 
         for (int i = 1; i < temp.length; i++) {
-            number=number+17;
+            number=number+17*13;
             temp[i] = number;
         }
         return temp;

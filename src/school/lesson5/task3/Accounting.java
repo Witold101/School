@@ -2,6 +2,11 @@ package school.lesson5.task3;
 
 import java.math.BigDecimal;
 
+/**
+ * Определить класс, который при инициализации принимает на вход 2 аргумента целого или вещественного типа.
+ * Задать методы возвращающие результат арифметических операций над заданными полями и полями типа BigDecimal.
+ */
+
 public class Accounting {
 
     private Long aLong;
@@ -37,8 +42,8 @@ public class Accounting {
     public void setBigDecimal(BigDecimal bigDecimal) {
         if (bigDecimal != null) {
             this.bigDecimal = bigDecimal;
-        }else {
-            this.bigDecimal=new BigDecimal(0);
+        } else {
+            this.bigDecimal = new BigDecimal(0);
         }
     }
 
@@ -49,8 +54,8 @@ public class Accounting {
     public void setaLong(Long aLong) {
         if (aLong != null) {
             this.aLong = aLong;
-        }else {
-            this.aLong=0L;
+        } else {
+            this.aLong = 0L;
         }
     }
 
@@ -61,8 +66,8 @@ public class Accounting {
     public void setaInteger(Integer aInteger) {
         if (aInteger != null) {
             this.aInteger = aInteger;
-        }else {
-            this.aInteger=0;
+        } else {
+            this.aInteger = 0;
         }
     }
 
@@ -73,7 +78,7 @@ public class Accounting {
     public void setaFloat(Float aFloat) {
         if (aFloat != null) {
             this.aFloat = aFloat;
-        }else {
+        } else {
             this.aFloat = 0f;
         }
     }
@@ -85,7 +90,7 @@ public class Accounting {
     public void setaDouble(Double aDouble) {
         if (aDouble != null) {
             this.aDouble = aDouble;
-        }else {
+        } else {
             this.aDouble = 0.0;
         }
     }

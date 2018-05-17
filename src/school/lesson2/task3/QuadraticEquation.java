@@ -18,12 +18,12 @@ public class QuadraticEquation {
 
     static double[] getABC() {
         Scanner result = new Scanner(System.in);
-        double[] nums = new double[3];
+        double[] num = new double[3];
         System.out.print("Enter values of variables a, b, c");
         for (int i = 0; i < 3; i++) {
-            nums[i] = result.nextInt();
+            num[i] = result.nextInt();
         }
-        return nums;
+        return num;
     }
 
     static boolean isPositive(double i) {
@@ -49,15 +49,15 @@ public class QuadraticEquation {
         } else return 0;
     }
 
-    static double[] quadraticEquation(int discriminant, double[] abc) {
+    static double[] quadraticEquation(int discriminantFlag, double[] abc) {
         double[] result = new double[2];
-        if (discriminant > 0) {
+        if (discriminantFlag > 0) {
             double discrim = abc[1] * abc[1] - 4 * abc[0] * abc[2];
             double temp = Math.sqrt(discrim);
             temp = -abc[1] + temp;
             result[0] = temp / (2 * abc[0]);
 
-            if (discriminant == 2) {
+            if (discriminantFlag == 2) {
                 temp = Math.sqrt(discrim);
                 temp = -abc[1] - temp;
                 result[1] = temp / (2 * abc[0]);

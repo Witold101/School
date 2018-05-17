@@ -2,7 +2,7 @@ package school.lesson2.task2;
 
 import java.util.Scanner;
 
-public class Task2 {
+public class Homes {
 
     /**
      * Имеются два дома размерами a на b и c на d. Размеры вводятся польователем с консоли.
@@ -13,32 +13,31 @@ public class Task2 {
 
     static int[] setSize(boolean flagSort) {
         Scanner result = new Scanner(System.in);
-        int[] nums = new int[2];
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = result.nextInt();
+        int[] num = new int[2];
+        for (int i = 0; i < num.length; i++) {
+            num[i] = result.nextInt();
         }
         if (flagSort) {
-            for (int j = 0; j < nums.length; j++) {
+            for (int j = 0; j < num.length; j++) {
                 int temporary;
-                for (int i = 0; i < nums.length - 1; i++) {
-                    if (nums[i] > nums[i + 1]) {
-                        temporary = nums[i + 1];
-                        nums[i + 1] = nums[i];
-                        nums[i] = temporary;
+                for (int i = 0; i < num.length - 1; i++) {
+                    if (num[i] > num[i + 1]) {
+                        temporary = num[i + 1];
+                        num[i + 1] = num[i];
+                        num[i] = temporary;
                     }
                 }
             }
         }
-        return nums;
+        return num;
     }
 
 
-    static int[][] getBigHomes(int[] home1, int[] home2, int[] area) {
+    static int[][] getBigHomes(int[] home1, int[] home2) {
         int[] sizeBlock1 = new int[2];
         int[] sizeBlock2 = new int[2];
         int[] sizeBlock3 = new int[2];
-        int[] temp = new int[2];
-
+        int[] temp;
         int[][] result = new int[3][2];
 
         if (home1[1] < home2[1]) {
@@ -96,7 +95,7 @@ public class Task2 {
         home2 = setSize(true);
         System.out.print("Enter length and width of the area.");
         area = setSize(true);
-        bigHomes = getBigHomes(home1, home2, area);
+        bigHomes = getBigHomes(home1, home2);
 
         System.out.print(checkInstallationHouse(bigHomes,area));
     }

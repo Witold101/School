@@ -14,12 +14,12 @@ public class Main {
     /* Returns the massif where 0 element - day, 1 element - month, 2 element - year.*/
     static int[] setDateMonthYear() {
         Scanner result = new Scanner(System.in);
-        int[] nums = new int[3];
+        int[] num = new int[3];
         System.out.print("Enter day, month, year through a gap and press ENTER.");
         for (int i = 0; i < 3; i++) {
-            nums[i] = result.nextInt();
+            num[i] = result.nextInt();
         }
-        return nums;
+        return num;
     }
 
     static boolean leapYear(int year) {
