@@ -10,7 +10,7 @@ public class Test {
 
         AtmNew atmNew = new AtmNew(quantity20, quantity50, quantity100);
         atmNew.printCash();
-        if (atmNew.getSum(130)) {
+        if (atmNew.getSum(390)) {
             atmNew.printCash();
             System.out.println("Выдано купюрами по 100 р - " + (quantity100 - atmNew.getNominal100()));
             System.out.println("Выдано купюрами по 50 р - " + (quantity50 - atmNew.getNominal50()));
