@@ -17,7 +17,7 @@ import java.util.Map;
 public class MapString {
 
     public static boolean isUnique(Map<String,String> stringMap){
-        
+
         return true;
     }
 }
