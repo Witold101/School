@@ -17,10 +17,26 @@ import java.util.*;
 public class MapString {
 
     public static boolean isUnique(Map<String, String> stringMap) {
-        Set<String> stringSet =new HashSet<>(stringMap.values());
-        return stringMap.keySet().size()==stringSet.size();
+        Set<String> stringSet = new HashSet<>(stringMap.values());
+        return stringMap.keySet().size() == stringSet.size();
     }
 
-    Map<String,String> map = new HashMap<>();
-    
+    public static void main(String[] args) {
+        Map<String, String> map1 = new TreeMap<>();
+        map1.put("Marty", "Stepp");
+        map1.put("Stuart", "Reges");
+        map1.put("Jessica", "Miller");
+        map1.put("Amanda", "Camp");
+        map1.put("Hal", "Perkins");
+
+        Map<String, String> map2 = new TreeMap<>();
+        map2.put("Kendrick", "Perkins");
+        map2.put("Stuart", "Reges");
+        map2.put("Jessica", "Miller");
+        map2.put("Bruce", "Reges");
+        map2.put("Hal", "Perkins");
+
+        System.out.println(isUnique(map1));
+        System.out.println(isUnique(map2));
+    }
 }
