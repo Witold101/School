@@ -1,6 +1,6 @@
 package school.lesson11.task1;
 
-import java.util.List;
+import java.util.*;
 
 public class Unique {
 
@@ -14,9 +14,39 @@ public class Unique {
      */
 
     public static int countUnique(List<Number> numbers) {
+        if (numbers != null) {
+            return new HashSet<>(numbers).size();
+        } else {
+            return -1;
+        }
+    }
 
-        return List<Number>
+    public static void main(String[] args) {
+        List<Number> numbersDouble = new ArrayList<>();
+        numbersDouble.add(3d);
+        numbersDouble.add(7d);
+        numbersDouble.add(3d);
+        numbersDouble.add(-1d);
+        numbersDouble.add(2d);
+        numbersDouble.add(3d);
+        numbersDouble.add(7d);
+        numbersDouble.add(2d);
+        numbersDouble.add(15d);
+        numbersDouble.add(15d);
 
-        return 0;
+        List<Number> numbersInteger = new ArrayList<>();
+        numbersInteger.add(3);
+        numbersInteger.add(7);
+        numbersInteger.add(3);
+        numbersInteger.add(-1);
+        numbersInteger.add(2);
+        numbersInteger.add(3);
+        numbersInteger.add(7);
+        numbersInteger.add(2);
+        numbersInteger.add(15);
+        numbersInteger.add(15);
+
+        System.out.println(countUnique(numbersDouble));
+        System.out.println(countUnique(numbersInteger));
     }
 }
