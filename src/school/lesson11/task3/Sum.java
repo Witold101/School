@@ -1,8 +1,6 @@
 package school.lesson11.task3;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Сложить два многочлена заданной степени, если коэффициенты многочленов хранятся в двух объектах HashMap в виде:
@@ -23,58 +21,82 @@ public class Sum {
         int sign = 1;
 
         for (char ch : chars) {
-                if (ch != ' ') {
-                    switch (ch) {
-                        case 'x': {
-                            temp[0] = Integer.parseInt(buffer) * sign;
-                            buffer = "";
-                        }
-                        break;
-                        case '+': {
-                            if (!buffer.equals("")) {
-                                temp[1] = Integer.parseInt(buffer);
-                                sign = 1;
-                                buffer = "";
-                            } else {
-                                temp[1] = 1;
-                                sign = 1;
-                            }
-                            map.put(temp[1],temp[0]);
-                        }
-                        break;
-                        case '-': {
-                            if (!buffer.equals("")) {
-                                temp[1] = Integer.parseInt(buffer);
-                                sign = -1;
-                                buffer = "";
-                            } else {
-                                temp[1] = 1;
-                                sign = -1;
-                            }
-                            map.put(temp[1],temp[0]);
-                        }
-                        break;
-                        default: {
-                            if (ch != '^') {
-                                buffer = buffer + ch;
-                            }
-                        }
-                        break;
+            if (ch != ' ') {
+                switch (ch) {
+                    case 'x': {
+                        temp[0] = Integer.parseInt(buffer) * sign;
+                        buffer = "";
                     }
+                    break;
+                    case '+': {
+                        if (!buffer.equals("")) {
+                            temp[1] = Integer.parseInt(buffer);
+                            sign = 1;
+                            buffer = "";
+                        } else {
+                            temp[1] = 1;
+                            sign = 1;
+                        }
+                        map.put(temp[1], temp[0]);
+                        for (int i = 0; i < temp.length; i++) {
+                            temp[i] = null;
+                        }
+                    }
+                    break;
+                    case '-': {
+                        if (!buffer.equals("")) {
+                            temp[1] = Integer.parseInt(buffer);
+                            sign = -1;
+                            buffer = "";
+                        } else {
+                            temp[1] = 1;
+                            sign = -1;
+                        }
+                        map.put(temp[1], temp[0]);
+                        for (int i = 0; i < temp.length; i++) {
+                            temp[i] = null;
+                        }
+                    }
+                    break;
+                    default: {
+                        if (ch != '^') {
+                            buffer = buffer + ch;
+                        }
+                    }
+                    break;
                 }
+            }
         }
-        if(!buffer.equals("")&& temp[1]==null){
-            temp[0]=Integer.parseInt(buffer);
-            temp[1]=0;
-            map.put(temp[1],temp[0]);
-        }else if( !buffer.equals("")&& temp[1]!=null){
-            temp[1]=Integer.parseInt(buffer);
-            map.put(temp[1],temp[0]);
+        if (!buffer.equals("") && temp[1] == null) {
+            temp[0] = Integer.parseInt(buffer);
+            temp[1] = 0;
+            map.put(temp[1], temp[0]);
+        } else if (!buffer.equals("") && temp[1] != null) {
+            temp[1] = Integer.parseInt(buffer);
+            map.put(temp[1], temp[0]);
+        } else if (buffer.equals("") && temp[1] != null) {
+            temp[1] = 1;
+            map.put(temp[1], temp[0]);
         }
         return map;
     }
 
+    // Метод преобразовывает HashMap в строку многочлен
     public static String getStringPolynomial(HashMap<Integer, Integer> polynomial) {
+        String s = "";
+        List<Integer> listKey = new ArrayList<>(polynomial.keySet());
+        Collections.sort(listKey);
+        Integer value;
+        for (int i = listKey.size() - 1; i < 0; i++) {
+            value = polynomial.get(listKey.get(i));
+            if (value >= 0 && i > 0) {
+                if (s.equals("")) {
+                    s = value.toString() +
+                }
+                s = s +
+            }
+
+        }
         return null;
     }
 
@@ -85,10 +107,11 @@ public class Sum {
     }
 
     public static void main(String[] args) {
-        String polynomial1 = "24x^6 + 4x^4 + 90x^3 + 3x + 8";
-        String polynomial2 = " 224x^7 + 21x^4 + 3x^3 - 3x^2 ";
+        String polynomial1 = "24x^6 + 4x^4 + 90x^3 + 8";
+        String polynomial2 = " 224x^7 + 21x^4 + 3x^3 - 3x + 23";
 
-        HashMap<Integer, Integer> polyamial = getPolynomial(polynomial2);
+        HashMap<Integer, Integer> polyamial = getPolynomial(polynomial1);
+        getStringPolynomial(polyamial);
 
 //        System.out.println(getStringPolynomial());
     }
