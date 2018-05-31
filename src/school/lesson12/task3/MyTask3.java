@@ -6,6 +6,14 @@ package school.lesson12.task3;
  *           Вызвать этот метод и отловить исключение. Вывести stacktrace в консоль.
  */
 
-public class MyException {
+public class MyTask3 {
+
+    public void getException() throws TestException {
+        throw new TestException();
+    }
+
+
+    class TestException extends Exception{
+    }
 
 }
