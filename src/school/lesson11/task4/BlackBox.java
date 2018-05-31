@@ -1,8 +1,6 @@
 package school.lesson11.task4;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Реализовать структуру «Черный ящик» хранящую целые числа. Структура должна поддерживать
@@ -10,16 +8,19 @@ import java.util.List;
  */
 
 public class BlackBox {
-    private ArrayList<Integer> box;
+    private TreeSet<Integer> box;
 
     public BlackBox() {
-        this.box = new ArrayList<>();
+        this.box = new TreeSet<>();
+    }
+
+    public TreeSet<Integer> getBox() {
+        return box;
     }
 
     public void add(Integer number) {
         if (number != null) {
             box.add(number);
-            Collections.sort(box);
         }
     }
 
@@ -27,16 +28,44 @@ public class BlackBox {
         if (position > box.size()) {
             System.out.println("В ящике нет запрашиваемого числа ввиду малой заполненности ящика.");
             return null;
-        }else if(position==0){
+        } else if (position <= 0) {
             System.out.println("Введены не коректные данные.");
             return null;
-        }
-        else {
-            return box.get(position-1);
+        } else {
+            Iterator<Integer> iterator = box.iterator();
+            for (int i = 0; i < position - 1; i++) {
+                iterator.next();
+            }
+            return iterator.next();
         }
     }
 
-    public int getMaxNumber(int position) {
 
+    public Integer getMaxNumber(int position) {
+        if (position > box.size()) {
+            System.out.println("В ящике нет запрашиваемого числа ввиду малой заполненности ящика.");
+            return null;
+        } else if (position <= 0) {
+            System.out.println("Введены не коректные данные.");
+            return null;
+        } else {
+            Iterator<Integer> iterator = box.iterator();
+            for (int i = 0; i < box.size() - position; i++) {
+                iterator.next();
+            }
+            return iterator.next();
+        }
+    }
+
+    @Override
+    public String toString() {
+        Iterator<Integer> iterator = getBox().iterator();
+        String s = "";
+        int i = 0;
+        while (iterator.hasNext()) {
+            i++;
+            s = s + "Position (" + i + ") = " + iterator.next() + "\n";
+        }
+        return s;
     }
 }
