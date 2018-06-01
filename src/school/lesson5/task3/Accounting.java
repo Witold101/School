@@ -9,101 +9,47 @@ import java.math.BigDecimal;
 
 public class Accounting {
 
-    private Long aLong;
-    private Integer aInteger;
-    private Float aFloat;
-    private Double aDouble;
-    private BigDecimal bigDecimal;
+    private final int SCALE =5;
 
-    public Accounting(Long aLong, Integer aInteger) {
-        if (aLong != null && aInteger != null) {
-            this.aLong = aLong;
-            this.aInteger = aInteger;
+    private BigDecimal arg1;
+    private BigDecimal arg2;
+
+
+    public Accounting(Number arg1, Number arg2) {
+        if (arg1 != null && arg2 != null) {
+            if (arg1 instanceof BigDecimal) {
+                this.arg1 = (BigDecimal) arg1;
+            } else {
+                this.arg1 = new BigDecimal(arg1.toString());
+            }
+            if (arg2 instanceof BigDecimal) {
+                this.arg2 = (BigDecimal) arg2;
+            } else {
+                this.arg2 = new BigDecimal(arg2.toString());
+            }
         } else {
-            this.aLong = 0L;
-            this.aInteger = 0;
+            this.arg1 = new BigDecimal(0);
+            this.arg2 = new BigDecimal(0);
         }
     }
 
-    public Accounting(Float aFloat, Double aDouble) {
-        if (aFloat != null && aDouble != null) {
-            this.aFloat = aFloat;
-            this.aDouble = aDouble;
-        } else {
-            this.aFloat = 0f;
-            this.aDouble = 0.0;
+    public BigDecimal Addition() {
+        return arg1.add(arg2);
+    }
+
+    public BigDecimal Subtraction() {
+        return arg1.subtract(arg2);
+    }
+
+    public BigDecimal Division() {
+        if (arg2.floatValue() == 0.0){
+            return null;
         }
+            return arg1.divide(arg2,SCALE,BigDecimal.ROUND_HALF_UP);
     }
 
-    public BigDecimal getBigDecimal() {
-        return bigDecimal;
+    public BigDecimal Multiplication() {
+        return arg1.multiply(arg2);
     }
 
-    public void setBigDecimal(BigDecimal bigDecimal) {
-        if (bigDecimal != null) {
-            this.bigDecimal = bigDecimal;
-        } else {
-            this.bigDecimal = new BigDecimal(0);
-        }
-    }
-
-    public Long getaLong() {
-        return aLong;
-    }
-
-    public void setaLong(Long aLong) {
-        if (aLong != null) {
-            this.aLong = aLong;
-        } else {
-            this.aLong = 0L;
-        }
-    }
-
-    public Integer getaInteger() {
-        return aInteger;
-    }
-
-    public void setaInteger(Integer aInteger) {
-        if (aInteger != null) {
-            this.aInteger = aInteger;
-        } else {
-            this.aInteger = 0;
-        }
-    }
-
-    public Float getaFloat() {
-        return aFloat;
-    }
-
-    public void setaFloat(Float aFloat) {
-        if (aFloat != null) {
-            this.aFloat = aFloat;
-        } else {
-            this.aFloat = 0f;
-        }
-    }
-
-    public Double getaDouble() {
-        return aDouble;
-    }
-
-    public void setaDouble(Double aDouble) {
-        if (aDouble != null) {
-            this.aDouble = aDouble;
-        } else {
-            this.aDouble = 0.0;
-        }
-    }
-
-    public Long longAddInteger() {
-        return this.aLong + this.aInteger;
-    }
-
-    public Double doubleAddFloat() {
-        return this.aDouble + this.aFloat;
-    }
-
-    public BigDecimal doubleAddDecimal() {
-        return this.bigDecimal = new BigDecimal(aDouble.toString()).add(new BigDecimal(aFloat.toString()));
-    }
 }
