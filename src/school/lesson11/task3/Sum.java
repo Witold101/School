@@ -98,7 +98,7 @@ public class Sum {
                     return number.toString();
                 }
             } else {
-                if (number < 0) {
+                if (number < -1) {
                     if (degree > 1) {
                         return " - " + Math.abs(number) + "x^" + degree;
                     } else if (degree == 1) {
@@ -106,13 +106,29 @@ public class Sum {
                     } else {
                         return " - " + Math.abs(number);
                     }
-                } else if (number > 0) {
+                } else if (number > 1) {
                     if (degree > 1) {
                         return " + " + Math.abs(number) + "x^" + degree;
                     } else if (degree == 1) {
                         return " + " + Math.abs(number) + "x";
                     } else {
                         return " + " + Math.abs(number);
+                    }
+                } else if (number == 1) {
+                    if (degree > 1) {
+                        return " + " + "x^" + degree;
+                    } else if (degree == 1) {
+                        return " + " + "x";
+                    } else {
+                        return " + " + Math.abs(number);
+                    }
+                } else if (number == -1) {
+                    if (degree > 1) {
+                        return " - " + "x^" + degree;
+                    } else if (degree == 1) {
+                        return " - " + "x";
+                    } else {
+                        return " - " + Math.abs(number);
                     }
                 }
             }
@@ -145,26 +161,26 @@ public class Sum {
             for (Integer key : polynomial2.keySet()) {
                 if (mapResult.containsKey(key)) {
                     temp = mapResult.get(key) + polynomial2.get(key);
-                    mapResult.put(key,temp);
-                }else {
-                    mapResult.put(key,polynomial2.get(key));
+                    mapResult.put(key, temp);
+                } else {
+                    mapResult.put(key, polynomial2.get(key));
                 }
             }
             return mapResult;
-        }else {
+        } else {
             return null;
         }
     }
 
     public static void main(String[] args) {
         String polynomial1 = "-24x^7 - 24x^6 - 4x^4 + 90x^3 + 8";
-        String polynomial2 = " 224x^7 + 21x^4 + 3x^3 - 3x - 23";
+        String polynomial2 = " 224x^7 + 3x^4 + 3x^3 - 3x - 23";
 
         HashMap<Integer, Integer> polynomialHashMap1 = getPolynomial(polynomial1);
         HashMap<Integer, Integer> polynomialHashMap2 = getPolynomial(polynomial2);
 
         System.out.println(getStringPolynomial(polynomialHashMap1));
         System.out.println(getStringPolynomial(polynomialHashMap2));
-        System.out.println(getStringPolynomial(sumPolynomial(polynomialHashMap1,polynomialHashMap2)));
+        System.out.println(getStringPolynomial(sumPolynomial(polynomialHashMap1, polynomialHashMap2)));
     }
 }
