@@ -4,14 +4,33 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Queue;
 
-public class CaractersQueue implements Queue {
+public class CharactersQueue implements Queue {
+    private final int BEGIN_SIZE = 15;
     private int size;
-    private final int beginSize=15;
-    private Character[]queue;
+    private Object[] queue;
+    private Iterator iterator;
+    private int iteratorsIndex;
+    private Смещение головы очереди в массиве
 
-    public CaractersQueue() {
-        this.size = -1;
-        queue=new Character[this.beginSize];
+    public CharactersQueue() {
+        this.size = 0;
+        queue = new Object[this.BEGIN_SIZE];
+        iteratorsIndex = 0;
+
+        iterator = new Iterator() {
+            @Override
+            public boolean hasNext() {
+                return iteratorsIndex < size;
+            }
+
+            @Override
+            public Object next() {
+                if (hasNext()){
+                    return
+                }
+                return null;
+            }
+        }
     }
 
     @Override
@@ -21,7 +40,7 @@ public class CaractersQueue implements Queue {
 
     @Override
     public boolean isEmpty() {
-        return this.size == -1;
+        return this.size == 0;
     }
 
     @Override
@@ -61,7 +80,8 @@ public class CaractersQueue implements Queue {
 
     @Override
     public void clear() {
-
+        this.size = 0;
+        queue = new Object[this.BEGIN_SIZE];
     }
 
     @Override
@@ -103,4 +123,5 @@ public class CaractersQueue implements Queue {
     public Object peek() {
         return null;
     }
+
 }
