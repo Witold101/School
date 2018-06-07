@@ -17,17 +17,21 @@ public class Task3 {
     }
 
     public static void main(String[] args) {
-        String s1 = "Привет! Я всем когда прихожу то говою Привет";
+        String s1 = "Привет! Я всем когда Привет\nприхожу то говою ";
         String s2 = "Привет! Я всем когда прихожу то говою привет";
         String s3 = "привет! Я всем когда прихожу то говою Привет";
         String s4 = "Привет";
         String s5 = "";
 
         String s = "Привет";
-        System.out.println(isStringBeginEnd(s1, s));
-        System.out.println(isStringBeginEnd(s2, s));
-        System.out.println(isStringBeginEnd(s3, s));
-        System.out.println(isStringBeginEnd(s4, s));
-        System.out.println(isStringBeginEnd(s5, s));
+        try {
+            System.out.println(isStringBeginEnd(s1, s));
+            System.out.println(isStringBeginEnd(s2, s));
+            System.out.println(isStringBeginEnd(s3, s));
+            System.out.println(isStringBeginEnd(s4, s));
+            System.out.println(isStringBeginEnd(s5, s));
+        }catch (NullPointerException e){
+            e.printStackTrace();
+        }
     }
 }
