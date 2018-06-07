@@ -15,41 +15,38 @@ public class Task1 {
 
     public static long getSpeedPlus(String... arg) {
         String str = "";
-        long timeStart = System.currentTimeMillis();
-        for (int i = 0; i < 1000; i++) {
+        long timeStart = System.nanoTime();
+        for (int i = 0; i < 100; i++) {
             for (String s : arg) {
                 str += s;
             }
         }
-        long timeEnd = System.currentTimeMillis();
+        long timeEnd = System.nanoTime();
         return timeEnd - timeStart;
     }
 
     public static long getSpeedBuilder(String... arg) {
         StringBuilder builder = new StringBuilder();
-        long timeStart = System.currentTimeMillis();
-        for (int i = 0; i < 1000; i++) {
+        long timeStart = System.nanoTime();
+        for (int i = 0; i < 100; i++) {
             for (String s : arg) {
                 builder = builder.append(s);
             }
         }
-        long timeEnd = System.currentTimeMillis();
+        long timeEnd = System.nanoTime();
         return timeEnd - timeStart;
     }
 
     public static void main(String[] args) {
-
         long plus = 0;
-
         for (int i = 0; i < 100; i++) {
             plus += getSpeedPlus(string1, string2, string3, string4, string5);
         }
         System.out.println(plus);
-        plus=0;
+        plus = 0;
         for (int i = 0; i < 100; i++) {
-            plus+=getSpeedBuilder(string1, string2, string3, string4, string5);
+            plus += getSpeedBuilder(string1, string2, string3, string4, string5);
         }
         System.out.println(plus);
     }
-
 }
