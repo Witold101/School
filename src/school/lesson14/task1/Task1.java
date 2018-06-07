@@ -13,13 +13,13 @@ import java.util.regex.Pattern;
 public class Task1 {
 
     public static boolean isMail(String mail) {
-        Pattern pattern = Pattern.compile("\\w[\\w\\d_]*@{1}[\\w\\d]+(.[\\w\\d_]+)*.[\\w]{2,}");
+        Pattern pattern = Pattern.compile("^([A-Za-z]+\\w*@[A_Za-z\\d]+\\w*\\.([A-Za-z\\d]{2,}\\.)?[A_Za-z\\d]{2,})$");
         Matcher math = pattern.matcher(mail.trim());
         return math.find();
     }
 
     public static void main(String[] args) {
-        String mail = "info@tut.by4.";
-        System.out.println(isMail(mail));
+        String mail = "info@tut.by ";
+        System.out.println(isMail(mail.trim()));
     }
 }

@@ -11,9 +11,9 @@ public class Task2 {
      */
 
     public static void main(String[] args) {
-        String s = "lkjljkl 0xafD8 0xKJHhkj0xKJTYkj0xKJHhkj0xKJHhkj 0xA9 JHhkj0xKJHhkj0xKJHhkj0xKJHhkj";
+        String s = "lkjljkl 0xADD8 0xKJHhkj0xKJTYkj0xKJHhkj0xKJHhkj 0xA9 JHhkj0xAAAJHhkj0xKJHhkj0xKJHhkj";
 
-        Pattern p = Pattern.compile("\\b0x[A-Fa-f\\d]+\\b");
+        Pattern p = Pattern.compile("\\b(0x[A-F\\d]+)\\b");
         Matcher matcher = p.matcher(s);
         while (matcher.find()){
             System.out.println(matcher.group());

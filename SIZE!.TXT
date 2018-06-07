@@ -1,0 +1,440 @@
+<invoice>
+<number>26/2018</number>
+<place>Gdynia</place>
+<sell-date>2018-05-21</sell-date>
+<payment-type>transfer</payment-type>
+<price-net type="decimal">50982.1</price-net>
+<price-gross type="decimal">50982.1</price-gross>
+<currency>USD</currency>
+<description>
+Contract 20 date 2018/05/18 Country of goods' origin: China Terms of delivery: CPT Smolensk Russia Country of appointment: Russia KOD HS 6406909000 Net weight - 19 690 Gross weight - 20 860 kgs
+</description>
+<seller-name>PIONWIT SPOLKA Z OGRANICZONA ODPOWIEDZIALNOSCIA</seller-name>
+<seller-tax-no>7962967335</seller-tax-no>
+<seller-street>ul. Juliusza Slowackiego 7/80</seller-street>
+<seller-post-code>26-670</seller-post-code>
+<seller-city>Pionki</seller-city>
+<seller-country>PL</seller-country>
+<seller-email/>
+<seller-phone/>
+<seller-fax/>
+<seller-www/>
+<seller-person>Anna Kustra</seller-person>
+<seller-bank>Alior Bank SA, SWIFT: ALBPPLPW</seller-bank>
+<seller-bank-account>PL68 2490 0005 0000 4600 3792 1449 (USD)</seller-bank-account>
+<buyer-name>Vistar Ltd.</buyer-name>
+<buyer-tax-no>1106732000055</buyer-tax-no>
+<buyer-post-code>214004</buyer-post-code>
+<buyer-city>Smolensk</buyer-city>
+<buyer-street>Babushkina str. 1</buyer-street>
+<buyer-country>RU</buyer-country>
+<buyer-email/>
+<buyer-www nil="true"/>
+<buyer-fax nil="true"/>
+<buyer-phone>+7 499 500-96-40</buyer-phone>
+<kind>vat</kind>
+<payment-to type="date">2018-10-18</payment-to>
+<paid type="decimal">0.0</paid>
+<seller-bank-account-id type="integer" nil="true"/>
+<lang>en</lang>
+<issue-date type="date">2018-05-21</issue-date>
+<price-tax type="decimal">0.0</price-tax>
+<oid/>
+<discount type="decimal">0.0</discount>
+<show-discount type="boolean">false</show-discount>
+<description-long/>
+<buyer-tax-no-kind>UNN</buyer-tax-no-kind>
+<seller-tax-no-kind/>
+<description-footer/>
+<sell-date-kind nil="true"/>
+<payment-to-kind>150</payment-to-kind>
+<exchange-currency nil="true"/>
+<discount-kind>percent_total</discount-kind>
+<income type="boolean">true</income>
+<exchange-kind>nbp</exchange-kind>
+<exchange-rate type="decimal">3.6241</exchange-rate>
+<delivery-address/>
+<buyer-person/>
+<buyer-bank-account nil="true"/>
+<buyer-bank nil="true"/>
+<exchange-note>094/A/NBP/2018 /</exchange-note>
+<buyer-company type="boolean">true</buyer-company>
+<exchange-currency-rate type="decimal" nil="true"/>
+<exchange-date type="date">2018-05-16</exchange-date>
+<positions type="array">
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 131/11</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">2500.0</quantity>
+<total-price-gross type="decimal">1275.0</total-price-gross>
+<total-price-net type="decimal">1275.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 1701/5</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">1000.0</quantity>
+<total-price-gross type="decimal">510.0</total-price-gross>
+<total-price-net type="decimal">510.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 1701/6</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">2500.0</quantity>
+<total-price-gross type="decimal">1275.0</total-price-gross>
+<total-price-net type="decimal">1275.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 1701/7</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">6500.0</quantity>
+<total-price-gross type="decimal">3315.0</total-price-gross>
+<total-price-net type="decimal">3315.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 1701/8</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">13500.0</quantity>
+<total-price-gross type="decimal">6885.0</total-price-gross>
+<total-price-net type="decimal">6885.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 1701/9</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">13500.0</quantity>
+<total-price-gross type="decimal">6885.0</total-price-gross>
+<total-price-net type="decimal">6885.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 1701/10</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">5500.0</quantity>
+<total-price-gross type="decimal">2805.0</total-price-gross>
+<total-price-net type="decimal">2805.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 1701/11</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">2000.0</quantity>
+<total-price-gross type="decimal">1020.0</total-price-gross>
+<total-price-net type="decimal">1020.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 1443/5</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">200.0</quantity>
+<total-price-gross type="decimal">102.0</total-price-gross>
+<total-price-net type="decimal">102.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 1443/7</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">2000.0</quantity>
+<total-price-gross type="decimal">1020.0</total-price-gross>
+<total-price-net type="decimal">1020.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 1443/8</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">5000.0</quantity>
+<total-price-gross type="decimal">2550.0</total-price-gross>
+<total-price-net type="decimal">2550.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 1443/9</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">5000.0</quantity>
+<total-price-gross type="decimal">2550.0</total-price-gross>
+<total-price-net type="decimal">2550.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 1443/10</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">1500.0</quantity>
+<total-price-gross type="decimal">765.0</total-price-gross>
+<total-price-net type="decimal">765.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Wkladki metalowe 0785/7</name>
+<price-net type="decimal">0.58</price-net>
+<quantity type="decimal">2000.0</quantity>
+<total-price-gross type="decimal">1160.0</total-price-gross>
+<total-price-net type="decimal">1160.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.58</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Wkladki metalowe 0785/8</name>
+<price-net type="decimal">0.58</price-net>
+<quantity type="decimal">3500.0</quantity>
+<total-price-gross type="decimal">2030.0</total-price-gross>
+<total-price-net type="decimal">2030.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.58</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 101/6</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">1000.0</quantity>
+<total-price-gross type="decimal">510.0</total-price-gross>
+<total-price-net type="decimal">510.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 101/7</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">500.0</quantity>
+<total-price-gross type="decimal">255.0</total-price-gross>
+<total-price-net type="decimal">255.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 101/8</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">13000.0</quantity>
+<total-price-gross type="decimal">6630.0</total-price-gross>
+<total-price-net type="decimal">6630.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 101/9</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">13000.0</quantity>
+<total-price-gross type="decimal">6630.0</total-price-gross>
+<total-price-net type="decimal">6630.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka 101/10</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">1500.0</quantity>
+<total-price-gross type="decimal">765.0</total-price-gross>
+<total-price-net type="decimal">765.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski metalowe z gumka MPC</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">4000.0</quantity>
+<total-price-gross type="decimal">2040.0</total-price-gross>
+<total-price-net type="decimal">2040.0</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+<position type="InvoicePosition">
+<name>Podnoski plastikowe z gumka MPC</name>
+<price-net type="decimal">0.51</price-net>
+<quantity type="decimal">10.0</quantity>
+<total-price-gross type="decimal">5.1</total-price-gross>
+<total-price-net type="decimal">5.1</total-price-net>
+<additional-info/>
+<quantity-unit>para</quantity-unit>
+<tax>0</tax>
+<price-gross type="decimal">0.51</price-gross>
+<price-tax type="decimal">0.0</price-tax>
+<total-price-tax type="decimal">0.0</total-price-tax>
+<discount type="decimal" nil="true"/>
+<discount-percent type="decimal" nil="true"/>
+<tax2>0</tax2>
+<code nil="true"/>
+</position>
+</positions>
+</invoice>
