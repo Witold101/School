@@ -28,9 +28,6 @@ public class Task3 {
 
         Pattern p = Pattern.compile(Task3.TEG_P);
         Matcher matcher = p.matcher(s);
-        while (matcher.find()){
-            
-            System.out.println(matcher.group());
-        }
+        System.out.println(matcher.replaceAll("<p>"));
     }
 }
