@@ -8,9 +8,7 @@ import java.math.BigDecimal;
  */
 
 public class Accounting {
-
-    private final int SCALE =5;
-
+    private final int SCALE = 5;
     private BigDecimal arg1;
     private BigDecimal arg2;
 
@@ -42,10 +40,10 @@ public class Accounting {
     }
 
     public BigDecimal Division() {
-        if (arg2.floatValue() == 0.0){
+        if (arg2.floatValue() == 0.0) {
             return null;
         }
-            return arg1.divide(arg2,SCALE,BigDecimal.ROUND_HALF_UP);
+        return arg1.divide(arg2, SCALE, BigDecimal.ROUND_HALF_UP);
     }
 
     public BigDecimal Multiplication() {
