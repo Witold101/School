@@ -16,15 +16,15 @@ public class Task6 {
     }
 
     private static void getElement(File[] elements) {
-        int positon = 0;
-        while (positon < elements.length) {
-            if (elements[positon].isFile()) {
-                System.out.println(elements[positon].getAbsolutePath() + elements[positon].getName());
-            } else if (elements[positon].isDirectory()) {
-                System.out.println(elements[positon].getAbsolutePath());
-                getElement(elements[positon].listFiles());
+        int position = 0;
+        while (position < elements.length) {
+            if (elements[position].isFile()) {
+                System.out.println(elements[position].getAbsolutePath() + elements[position].getName());
+            } else if (elements[position].isDirectory()) {
+                System.out.println(elements[position].getAbsolutePath());
+                getElement(elements[position].listFiles());
             }
-            positon++;
+            position++;
         }
     }
 
