@@ -12,7 +12,7 @@ public class Task6 {
 
     private static void getPath(String path) {
         File directory = new File(path);
-        getElement(directory.listFiles());
+            getElement(directory.listFiles());
     }
 
     private static void getElement(File[] elements) {
