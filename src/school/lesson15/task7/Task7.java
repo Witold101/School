@@ -13,9 +13,10 @@ import java.util.regex.Pattern;
 
 public class Task7 {
 
-    private static void readString(File fileRead, File fileWrite) {
+    public static void readString(File fileRead, File fileWrite) {
         FileInputStream stream = null;
         InputStreamReader is = null;
+        StringBuffer sb = null;
 
         if (fileRead.exists()) {
             try {
@@ -25,8 +26,8 @@ public class Task7 {
                 String s = null;
                 boolean flagWriteInEndFile = false;
                 while ((s = bis.readLine()) != null) {
-                    StringBuffer sb = new StringBuffer(s);
-                    writeStringLine(fileWrite, sb.reverse().toString(), flagWriteInEndFile);
+                     sb = new StringBuffer(s);
+                    writeStringLine(fileWrite, sb.toString(), flagWriteInEndFile);
                     flagWriteInEndFile = true;
                 }
                 stream.close();
@@ -40,7 +41,7 @@ public class Task7 {
         }
     }
 
-    private static void writeStringLine(File fileName, String stringWrite, boolean writeInEnd) {
+    public static void writeStringLine(File fileName, String stringWrite, boolean writeInEnd) {
         try {
             if (!fileName.exists()) {
                 if (!fileName.createNewFile()) {
