@@ -4,6 +4,8 @@ import jdk.internal.util.xml.impl.Input;
 import school.lesson15.task7.Task7;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 1.	Сравнить скорость чтения и записи 5 МБ символов при использовании классов буфиризированого и не
@@ -73,7 +75,6 @@ public class Task1 {
 
 
     public static void main(String[] args) {
-
         String FILENAME_BEGIN = "NOTICE.txt";
         String FILENAME_END = "notice_end.txt";
         File fileBegin = new File(FILENAME_BEGIN);
