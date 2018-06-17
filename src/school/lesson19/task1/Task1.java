@@ -1,5 +1,8 @@
 package school.lesson19.task1;
 
+import school.lesson19.task1.buyer.Buyer;
+import school.lesson19.task1.shop.Shop;
+
 /**
  * Задание: Создать многопоточное приложение, корректно работающее с разделяемыми ресурсами и избегающие ситуации
  * взаимной блокировки. Любая сущность, желающая получить доступ к разделяемому ресурсу, должна быть потоком
@@ -19,4 +22,11 @@ package school.lesson19.task1;
  */
 
 public class Task1 {
+
+    public static void main(String[] args) {
+        Shop shop = new Shop();
+        for (int i = 0; i < 10; i++) {
+            new Thread(new Buyer(shop,i)).start();
+        }
+    }
 }
